@@ -7,7 +7,7 @@ import uuid
 app = FastAPI()
 
 # Load model (tiny | base | small | medium | large-v3)
-model = WhisperModel("large-v3", device="cpu", compute_type="int8")
+model = WhisperModel("small", device="cpu", compute_type="int8")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_DIR = os.path.join(BASE_DIR, "..", "server", "uploads", "audio")

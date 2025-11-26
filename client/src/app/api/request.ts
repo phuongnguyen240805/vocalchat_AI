@@ -1,7 +1,7 @@
 import type { ApiResponse } from "@/types/api";
 import { getToken } from "@/utils/auth";
 
-export const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+export const BASE_URL = import.meta.env.VITE_API_DEPLOYMENT_URL; //  devolopment: VITE_API_BASE_URL
 console.log(BASE_URL)
 export async function requestApi<T>(
   endpoint: string,
