@@ -1,3 +1,4 @@
+import 'module-alias/register';
 import { createServer } from 'http';
 import express from 'express';
 import cors from 'cors';
