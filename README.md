@@ -11,16 +11,6 @@
   - WhisperModel (Speech-to-Text - Local)
 - Optional: **Python** (for local AI recommendation module)
 
-## 👨‍💻 About the Author
-
-Developed by **Nguyễn Anh Cường (Cường Dev / CeeJay)**  
-Facebook: [Nguyễn Anh Cường](https://www.facebook.com/nguyenanh.cuong.600722/)  
-Email: [cuongna.dev@gmail.com](mailto:cuongna.dev@gmail.com) 
-
-Collaborator: **Trần Ka Bun (Ka Bun)**  
-Facebook: [Trần Bun](https://www.facebook.com/bunwg29)  
-Email: [bun2932005@gmail.com](mailto:bun2932005@gmail.com)
-
 ## 🎯 Introduction
 
 **VocalChat** is a realtime communication platform combining voice, text, and AI.
@@ -67,14 +57,6 @@ pip install -r requirements.txt
 # Run
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 ```
-⚠️ **Important Notes about Local WhisperModel:**
-
-- **Processing Time**: Local models are significantly slower than cloud-based APIs:
-  - `tiny` model: ~2-5 seconds per audio clip
-  - `base` model: ~5-10 seconds per audio clip
-  - `small` model: ~10-20 seconds per audio clip
-  - `medium` model: ~20-40 seconds per audio clip
-  - `large` model: ~40-60+ seconds per audio clip
 
 - **Hardware Requirements**:
   - Minimum: 4GB RAM for `tiny` and `base` models
@@ -82,11 +64,6 @@ uvicorn app:app --host 0.0.0.0 --port 8000 --reload
   - GPU recommended for `medium` and `large` models
 
 - **First Run**: The model will be downloaded automatically on first use (can take several minutes depending on size)
-
-- **Performance Tips**:
-  - Use `tiny` or `base` model for faster processing during development
-  - Use cloud-based OpenAI Whisper API for production (much faster)
-  - Consider using GPU acceleration if available (CUDA for NVIDIA GPUs)
 
 ### 🖥️ Step 2: Run the Server
 
@@ -135,39 +112,6 @@ npm run dev:electron
 
 The web client will be available at `http://localhost:5173`
 
-
-## 🌐 Deployed Project
-
-**Render** is a cloud platform that supports deploying both the **frontend** and **backend** of your application.  
-You can try the deployed version of VocalChat here:
-👉 https://vocalchat.onrender.com (updating)
-
-
-## 🧠 Learn More
-
-To learn more about the technologies used in **VocalChat**, check out these resources:
-
-### ⚡ React + Electron
-- [Electron Docs](https://www.electronjs.org/docs/latest) – Build cross-platform desktop apps    
-- [Learn React](https://react.dev/learn) – Declarative UI framework
-
-### 🧩 Node.js + Socket.IO
-- [Node.js Docs](https://nodejs.org/en/docs) – Learn more about runtime environment and npm modules  
-- [Socket.IO Docs](https://socket.io/docs/v4) – Realtime communication framework
-
-### 🧠 AI Speech Services
-- [OpenAI Whisper API](https://platform.openai.com/docs/guides/speech-to-text)  
-- [OpenAI Text-to-Speech](https://platform.openai.com/docs/guides/text-to-speech)
-- [OpenAI Whisper (Local)](https://github.com/openai/whisper) – Run Whisper models locally
-
-### 🐍 Python Integration
-- [PyTorch](https://pytorch.org/) – Local model inference  
-- [Transformers](https://huggingface.co/docs/transformers/index) – Run pre-trained speech models
-
-### ☁️ Render
-- [Render Docs](https://render.com/docs) – Cloud platform to deploy both frontend and backend services  
-- [Render GitHub Integration](https://render.com/docs/github) – Learn how to deploy automatically from GitHub
-
 ## 📝 License
 
 This project is developed for educational purposes and the AI for Life Competition.
@@ -175,7 +119,3 @@ This project is developed for educational purposes and the AI for Life Competiti
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to submit issues or pull requests.
-
----
-
-Made with ❤️ by Cường Dev & Ka Bun
